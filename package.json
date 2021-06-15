@@ -1,0 +1,31 @@
+{
+  "name": "root-peer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "npm run start-redis && cross-env ENV='development' nodemon index.js",
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
+    "start-redis": "redis-server --daemonize yes"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "hex-to-binary": "^1.0.1",
+    "morgan": "^1.10.0",
+    "redis": "^3.1.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
+  }
+}
